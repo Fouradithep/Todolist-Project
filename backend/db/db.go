@@ -30,8 +30,10 @@ func Init() {
 	password := os.Getenv("DB_PASSWORD")
 	dbname := os.Getenv("DB_NAME")
 
-	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=require",
+	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable",
 		host, user, password, dbname, port)
+		fmt.Println("DSN:", dsn)
+
 
 	// New logger for detailed SQL logging
 	newLogger := logger.New(
