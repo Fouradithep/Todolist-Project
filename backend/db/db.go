@@ -20,7 +20,7 @@ func Init() {
 	// โหลดค่า .env
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatal("ไม่สามารถโหลดไฟล์ .env:", err)
+		log.Println("ไม่สามารถโหลดไฟล์ .env:", err)
 	}
 
 	// อ่านค่าจาก environment
