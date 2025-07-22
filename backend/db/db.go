@@ -10,7 +10,7 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
-	"github.com/joho/godotenv"
+	
 )
 
 var DB *gorm.DB
@@ -18,10 +18,10 @@ var DB *gorm.DB
 func Init() {
 
 	// โหลดค่า .env
-	err := godotenv.Load()
-	if err != nil {
-		log.Println("ไม่สามารถโหลดไฟล์ .env:")
-	}
+	// err := godotenv.Load()
+	// if err != nil {
+	// 	log.Println("ไม่สามารถโหลดไฟล์ .env:")
+	// }
 
 	// อ่านค่าจาก environment
 	host := os.Getenv("DB_HOST")
