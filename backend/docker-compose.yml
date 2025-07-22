@@ -1,0 +1,49 @@
+services:
+  backend:
+    build: .
+    container_name: todolist-backend
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    restart: unless-stopped
+
+# services:
+#   backend:
+#     build: .
+#     container_name: todolist-backend
+#     ports:
+#       - "8080:8080"
+#     env_file:
+#       - .env
+#     depends_on:
+#       - postgres
+#     restart: unless-stopped
+
+#   postgres:
+#     image: postgres:latest
+#     container_name: todolist-db
+#     environment:
+#       POSTGRES_DB: mydatabase
+#       POSTGRES_USER: myuser
+#       POSTGRES_PASSWORD: mypassword
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data
+#     ports:
+#       - "5432:5432"
+#     restart: unless-stopped
+
+#   pgadmin:
+#     image: dpage/pgadmin4:latest
+#     container_name: todolist-pgadmin
+#     environment:
+#       PGADMIN_DEFAULT_EMAIL: admin@admin.com
+#       PGADMIN_DEFAULT_PASSWORD: admin
+#     ports:
+#       - "5050:80"
+#     depends_on:
+#       - postgres
+#     restart: unless-stopped
+
+# volumes:
+#   postgres_data:
