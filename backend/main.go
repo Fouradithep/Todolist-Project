@@ -17,7 +17,7 @@ func main() {
 	app := fiber.New()
 
 	app.Use(cors.New(cors.Config{
-    AllowOrigins:     "http://localhost:5173",  // ระบุ frontend origin ให้ชัดเจน
+    AllowOrigins:     "https://todolist-frontend-zf8m.onrender.com/login",  // ระบุ frontend origin ให้ชัดเจน
     AllowCredentials: true,
     AllowHeaders:     "Origin, Content-Type, Accept, Authorization",
 }))
