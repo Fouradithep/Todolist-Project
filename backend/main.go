@@ -20,6 +20,7 @@ func main() {
     AllowOrigins:     "https://todolist-project-pearl.vercel.app",  // ระบุ frontend origin ให้ชัดเจน
     AllowCredentials: true,
     AllowHeaders:     "Origin, Content-Type, Accept, Authorization",
+	AllowMethods:     "GET, POST, PUT, DELETE, OPTIONS",
 }))
 
 	routes.SetupAuthRoutes(app)
