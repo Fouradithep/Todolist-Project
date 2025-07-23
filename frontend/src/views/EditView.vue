@@ -37,7 +37,7 @@ const editTodo = async (selectedTodo) => {
 </script>
 
 <template>
-  <div class="p-6 max-w-2xl mx-auto space-y-6 bg-Base 100 min-h-screen" style="background-color: #1D232A;">
+  <div class="p-6 max-w-2xl mx-auto space-y-6 min-h-screen" style="background-color: #1D232A;">
     <!-- Header -->
     <div class="flex justify-between items-center">
       <h1 class="text-3xl font-bold text-white">🛠️ Edit Todo</h1>
