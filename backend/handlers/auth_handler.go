@@ -36,8 +36,8 @@ func AuthRequired(c *fiber.Ctx) error {
 		})
 	}
 
-	token, err := jwt.ParseWithClaims(tokenString, jwt.MapClaims{}, func(token *jwt.Token) (interface{}, error) {
-		return []byte(jwtSecretKey), nil
+	token, err := jwt.ParseWithClaims(tokenString, jwt.MapClaims{}, func(token *jwt.Token) (any, error) {
+    return []byte(jwtSecretKey), nil
 	})
 	if err != nil || !token.Valid {
 		return c.Status(fiber.StatusUnauthorized).JSON(fiber.Map{

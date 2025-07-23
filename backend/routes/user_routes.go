@@ -60,6 +60,8 @@ func SetupUserRoutes(app *fiber.App) {
         Value:    "",	// กำหนดให้เป็นค่าว่าง = ลบค่าเดิมออก
         Expires:  time.Now().Add(-time.Hour), // ตั้งเวลาให้หมดอายุไปแล้ว = ลบ cookie นี้
         HTTPOnly: true,
+		Secure:   true,
+		SameSite: fiber.CookieSameSiteNoneMode,
     })
     return c.JSON(fiber.Map{"message": "Logged out"})
 })
