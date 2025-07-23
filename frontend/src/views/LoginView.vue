@@ -23,7 +23,7 @@ const handleLogin = async () => {
 </script>
 
 <template>
-  <div class="p-6 max-w-2xl mx-auto space-y-6 bg-Base 100 min-h-screen">
+  <div class="p-6 max-w-2xl mx-auto space-y-6 bg-Base 100 min-h-screen" style="background-color: #1D232A;">
     <h1 class="text-3xl font-bold text-center text-white mb-6">🔑 Login</h1>
 
     <form @submit.prevent="handleLogin" class="space-y-4">

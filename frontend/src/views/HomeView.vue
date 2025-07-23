@@ -66,7 +66,7 @@ const filteredTodos = computed(() => {
 </script>
 
 <template>
-    <div class="p-6 max-w-2xl mx-auto space-y-6 bg-Base 100 min-h-screen" >
+    <div class="p-6 max-w-2xl mx-auto space-y-6  min-h-screen" style="background-color: #1D232A;" >
 
         <!-- Title -->
         <h1 class="text-white text-4xl font-bold drop-shadow-md text-center">
