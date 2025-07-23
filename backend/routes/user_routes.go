@@ -49,6 +49,7 @@ func SetupUserRoutes(app *fiber.App) {
 
 		return c.JSON(fiber.Map{
 			"message": "Login Successful",
+			"token":   token, //ios
 		})
 
 	})

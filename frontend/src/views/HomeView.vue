@@ -13,6 +13,8 @@ const isLoading = ref(false)
 
 onMounted(async() => {
     isLoading.value = true
+    // เรียก initializeAuth ก่อนเลย
+    await auth.initializeAuth();
     await todoStore.loadTodos()
     isLoading.value = false
 })
