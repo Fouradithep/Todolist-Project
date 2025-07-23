@@ -44,7 +44,7 @@ func SetupUserRoutes(app *fiber.App) {
 			Expires:  time.Now().Add(time.Hour * 72),
 			HTTPOnly: true,
 			Secure:   true,
-			SameSite: "None",
+			SameSite: fiber.CookieSameSiteNoneMode,
 		})
 
 		return c.JSON(fiber.Map{
