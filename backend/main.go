@@ -12,12 +12,12 @@ import (
 func main() {
 	db.Init()
 	fmt.Println("Server started...")
-	// รอเพิ่ม code run server หรือ handler ต่อไป
+	
 
 	app := fiber.New()
 
 	app.Use(cors.New(cors.Config{
-    AllowOrigins:     "https://todolist-frontend-zf8m.onrender.com",  // ระบุ frontend origin ให้ชัดเจน
+    AllowOrigins:     "https://todolist-project-pearl.vercel.app",  // ระบุ frontend origin ให้ชัดเจน
     AllowCredentials: true,
     AllowHeaders:     "Origin, Content-Type, Accept, Authorization",
 }))
