@@ -13,5 +13,5 @@ type Task struct {
 	UpdatedAt time.Time      `json:"updated_at"`
 	DeletedAt gorm.DeletedAt `gorm:"index" json:"-"`
 	UserID 	  uint   // FK
-  	User      User   // สร้างความสัมพันธ์
+  	User      User   // สร้างความสัมพันธ์ของUserID
 }
